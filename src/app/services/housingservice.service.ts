@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { map } from 'rxjs/operators';
+import { Iproperty } from '../property/Iproperty.Interface';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +12,6 @@ export class HousingserviceService {
 
   getAllPropertices()
   {
-    return this.http.get('data/properties.json');
+    return this.http.get<Iproperty[]>('data/properties.json');
   }
 }
