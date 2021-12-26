@@ -12,6 +12,7 @@ import { AddPropertyComponent } from './property/add-property/add-property.compo
 import { RentPropertyComponent } from './property/rent-property/rent-property.component';
 import { BuyPropertyComponent } from './property/buy-property/buy-property.component';
 import { PropertyDetailComponent } from './property/property-detail/property-detail.component';
+import {FormsModule} from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { PropertyDetailComponent } from './property/property-detail/property-det
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
