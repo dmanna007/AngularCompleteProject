@@ -12,7 +12,9 @@ import { AddPropertyComponent } from './property/add-property/add-property.compo
 import { RentPropertyComponent } from './property/rent-property/rent-property.component';
 import { BuyPropertyComponent } from './property/buy-property/buy-property.component';
 import { PropertyDetailComponent } from './property/property-detail/property-detail.component';
-import {FormsModule} from '@angular/forms'
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { UserRegisterComponent } from './user/user-register/user-register.component';
+import { UserLoginComponent } from './user/user-login/user-login.component'
 
 @NgModule({
   declarations: [
@@ -23,13 +25,16 @@ import {FormsModule} from '@angular/forms'
     AddPropertyComponent,
     RentPropertyComponent,
     BuyPropertyComponent,
-    PropertyDetailComponent
+    PropertyDetailComponent,
+    UserRegisterComponent,
+    UserLoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

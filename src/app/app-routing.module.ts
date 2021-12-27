@@ -5,6 +5,8 @@ import { BuyPropertyComponent } from './property/buy-property/buy-property.compo
 import { PropertyDetailComponent } from './property/property-detail/property-detail.component';
 import { PropertyListComponent } from './property/property-list/property-list.component';
 import { RentPropertyComponent } from './property/rent-property/rent-property.component';
+import { UserLoginComponent } from './user/user-login/user-login.component';
+import { UserRegisterComponent } from './user/user-register/user-register.component';
 
 const routes: Routes = [
   { path: '', component: PropertyListComponent },
@@ -13,6 +15,8 @@ const routes: Routes = [
   {path: 'buy-property', component: BuyPropertyComponent},
   {path: 'rent-property', component: PropertyListComponent},
   {path: 'detail-property/:id', component: PropertyDetailComponent},
+  {path: 'user/login', component: UserLoginComponent},
+  {path: 'user/register', component: UserRegisterComponent},
   {path:'**', component: PropertyListComponent}
 ];
 
