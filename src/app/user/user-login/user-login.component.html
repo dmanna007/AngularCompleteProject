@@ -6,17 +6,18 @@
           <div class="card-body p-5 text-center">
 
             <h3 class="mb-5">Sign in</h3>
+
             <form #loginForm = 'ngForm' (ngSubmit)="onLogin(loginForm)">
             <div class="form-outline mb-4">
-              <input type="email" id="typeEmailX-2" class="form-control form-control-lg"
-              required ngModel name="userName"/>
               <label class="form-label" for="typeEmailX-2">Email</label>
+              <input type="text" id="typeEmailX-2" class="form-control form-control-lg"
+              required ngModel name="userName"/>
             </div>
 
             <div class="form-outline mb-4">
+              <label class="form-label" for="typePasswordX-2">Password</label>
               <input type="password" id="typePasswordX-2" class="form-control form-control-lg"
               required ngModel name="password"/>
-              <label class="form-label" for="typePasswordX-2">Password</label>
             </div>
 
             <button [disabled]="!loginForm.valid" class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
