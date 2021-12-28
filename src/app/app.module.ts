@@ -17,6 +17,8 @@ import { UserRegisterComponent } from './user/user-register/user-register.compon
 import { UserLoginComponent } from './user/user-login/user-login.component'
 import { UserService } from './services/user.service';
 import { HousingserviceService } from './services/housingservice.service';
+import { AlertifyService } from './services/alertify.service';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { HousingserviceService } from './services/housingservice.service';
   ],
   providers: [
     HousingserviceService,
-    UserService
+    UserService,
+    AlertifyService,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })
