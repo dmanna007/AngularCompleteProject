@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { AlertifyService } from '../services/alertify.service';
+import { TabsetComponent } from 'ngx-bootstrap/tabs';
 
 @Component({
   selector: 'app-nav-bar',
@@ -9,6 +10,7 @@ import { AlertifyService } from '../services/alertify.service';
 export class NavBarComponent implements OnInit {
 
   userLoggedin: string;
+
   constructor(private alertify: AlertifyService) { }
 
   ngOnInit(): void {
