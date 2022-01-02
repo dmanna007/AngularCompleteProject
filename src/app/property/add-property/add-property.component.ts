@@ -2,7 +2,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { TabsetComponent } from 'ngx-bootstrap/tabs';
-import { Iproperty } from '../Iproperty.Interface';
+import { IProperty } from 'src/app/model/iproperty';
+import { IPropertyBase } from 'src/app/model/ipropertyBase';
 
 @Component({
   selector: 'app-add-property',
@@ -20,12 +21,18 @@ export class AddPropertyComponent implements OnInit {
   gatedCommunity: Array<string> = ['Yes', 'No'];
   mainEntrance: Array<string> = ['East', 'West', 'South', 'North'];
 
-  propertyView: Iproperty = {
+  propertyView: IPropertyBase = {
     Id: null,
     Name: null,
     Price: null,
     SellRent: null,
-    PType: null
+    PType: null,
+    FType: null,
+    BHK: null,
+    BuiltArea: null,
+    City: null,
+    RTM: null
+
   };
 
   constructor(private router: Router) { }
@@ -40,6 +47,8 @@ export class AddPropertyComponent implements OnInit {
   onSubmit() {
     //console.log(Form);
     console.log(this.addPropertyForm);
+    console.log('SellRent = '+this.addPropertyForm.value.BasicInfo.SellRent);
+    console.log('Property Type = '+this.addPropertyForm.value.BasicInfo.PType);
   }
 
   selectTab(tabId: number) {
